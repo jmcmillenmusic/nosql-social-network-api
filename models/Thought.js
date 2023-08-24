@@ -1,3 +1,4 @@
+// Import Schema and model from mongoose and Reaction.js
 const { Schema, model } = require('mongoose');
 const Reaction = require('./Reaction');
 
