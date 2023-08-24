@@ -5,7 +5,7 @@ const { Schema, model } = require('mongoose');
 const regexEmail = '/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/'
 
 // Establishes Schema for creating the User model
-const userSchema = new Schema (
+const userSchema = new Schema(
     {
         username: {
             type: String,
@@ -35,21 +35,21 @@ const userSchema = new Schema (
         ]
     },
     {
-      // Including virtuals in our response
-      toJSON: {
-        virtuals: true,
-      },
-      id: false,
+        // Including virtuals in our response
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
     }
 );
-  
+
 // Create a virtual property `friendCount` that returns the length of the friends array
 userSchema
     .virtual('friendCount')
-    .get(function () {
-        return `You have a total of ${this.friends.length} friends!`;
+    .get(() => {
+        return `You have a total of ${this.friends.length} friend(s)!`;
     });
-  
+
 // Initialize our User model
 const User = model('user', userSchema);
 
