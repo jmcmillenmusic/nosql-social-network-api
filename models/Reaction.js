@@ -2,7 +2,7 @@
 const { Schema, Types } = require('mongoose');
 
 // Establishes Schema for creating the Reaction model
-const reactionSchema = new Schema(
+const reactionSchema = new Schema (
     {
         reactionId: {
             type: Schema.Types.ObjectId,
