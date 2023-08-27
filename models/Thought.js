@@ -3,7 +3,7 @@ const { Schema, model } = require('mongoose');
 const Reaction = require('./Reaction');
 
 // Establishes Schema for creating the Thought model
-const thoughtSchema = new Schema(
+const thoughtSchema = new Schema (
     {
         thoughtText: {
             type: String,
