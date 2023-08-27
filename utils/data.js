@@ -7,6 +7,7 @@ const users = [
     { username: 'Romulus', email: 'romulus5@outlook.com' }
 ];
 
+// Array of thoughts with assigned usernames
 const thoughts = [
     { thoughtText: 'What does it mean to be free?', username: 'Azure' },
     { thoughtText: 'What do you want more than anything else?', username: 'Faraleth' },
@@ -15,6 +16,7 @@ const thoughts = [
     { thoughtText: 'What legacy do you hope to leave?', username: 'Romulus' }
 ];
 
+// Array of reactions with assigned usernames
 const reactions = [
     { reactionBody: 'You get to do whatever you want!', username: 'Faraleth' },
     { reactionBody: 'I want to be famous and very well-liked, of course!', username: 'Kragoth' },
