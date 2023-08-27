@@ -22,3 +22,5 @@ const reactions = [
     { reactionBody: 'A true friend is someone that has your back no matter what.', username: 'Romulus' },
     { reactionBody: 'I want to be remembered for being generous to those who are less fortunate so that they can pass it on.', username: 'Azure' }
 ];
+
+module.exports = users, thoughts, reactions;
