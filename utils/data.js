@@ -25,4 +25,4 @@ const reactions = [
     { reactionBody: 'I want to be remembered for being generous to those who are less fortunate so that they can pass it on.', username: 'Azure' }
 ];
 
-module.exports = users, thoughts, reactions;
+module.exports = { users, thoughts, reactions };
