@@ -4,6 +4,8 @@ const {
     getUsers,
     getSingleUser,
     createUser,
+    updateUser,
+    deleteUser
 } = require('../../controllers/userController');
 
 // API Route: /api/users
