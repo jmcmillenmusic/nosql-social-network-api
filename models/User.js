@@ -17,9 +17,10 @@ const userSchema = new Schema (
             type: String,
             unique: true,
             required: true,
-            validate: function (validator) {
-                return regexEmail.test(validator);
-            }
+            // validate: function (validator) {
+            //     return regexEmail.test(validator);
+            // }
+            match: [/.+@.+\..+/, 'Must match an email address!']
         },
         thoughts: [
             {

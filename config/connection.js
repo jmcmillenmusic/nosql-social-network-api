@@ -1,6 +1,6 @@
 const { connect, connection } = require('mongoose');
-const { MONGO_DB } = require('dotenv');
+require('dotenv').config();
 
-connect(MONGO_DB);
+connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.qmyc006.mongodb.net/${process.env.DB_NAME}`);
 
 module.exports = connection;
