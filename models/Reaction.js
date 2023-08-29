@@ -1,5 +1,6 @@
 // Import Schema and Types from mongoose
 const { Schema, Types } = require('mongoose');
+const moment = require('moment');
 
 // Establishes Schema for creating the Reaction model
 const reactionSchema = new Schema (
@@ -20,9 +21,7 @@ const reactionSchema = new Schema (
         createdAt: {
             type: Date,
             default: Date.now,
-            get: () => {
-                Date.now.toLocaleDateString();
-            },
+            get: timestamp => moment(timestamp).format('MMM D, YYYY [at] hh:mm a')
         },
     },
     {
