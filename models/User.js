@@ -17,10 +17,7 @@ const userSchema = new Schema (
             type: String,
             unique: true,
             required: true,
-            // validate: function (validator) {
-            //     return regexEmail.test(validator);
-            // }
-            match: [/.+@.+\..+/, 'Must match an email address!']
+            match: [regexEmail, 'Must match an email address!']
         },
         thoughts: [
             {
@@ -47,8 +44,8 @@ const userSchema = new Schema (
 // Create a virtual property `friendCount` that returns the length of the friends array
 userSchema
     .virtual('friendCount')
-    .get(() => {
-        return `You have a total of ${this.friends.length} friend(s)!`;
+    .get(function() {
+        return this.friends.length;
     });
 
 // Initialize our User model

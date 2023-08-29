@@ -34,8 +34,8 @@ const thoughtSchema = new Schema (
 // Create a virtual property `reactionCount` that gets the amount of reactions associated with a thought
 thoughtSchema
     .virtual('reactionCount')
-    .get(() => {
-        return `Your thought has ${this.reactions.length} reaction(s)!`;
+    .get(function() {
+        return this.reactions.length;
     });
 
 // Initialize our Thought model
