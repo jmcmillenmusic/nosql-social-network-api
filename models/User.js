@@ -1,9 +1,6 @@
 // Import Schema and model from mongoose
 const { Schema, model } = require('mongoose');
 
-// Regular expression for matching and validating an email address for the user
-const regexEmail = '/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/'
-
 // Establishes Schema for creating the User model
 const userSchema = new Schema (
     {
@@ -17,7 +14,7 @@ const userSchema = new Schema (
             type: String,
             unique: true,
             required: true,
-            match: [regexEmail, 'Must match an email address!']
+            match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'Must match an email address!']
         },
         thoughts: [
             {
