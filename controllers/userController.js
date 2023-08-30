@@ -6,7 +6,7 @@ module.exports = {
   async getUsers(req, res) {
     try {
       const users = await User.find()
-      .select('-__v')
+        .select('-__v')
       res.json(users);
     } catch (err) {
       res.status(500).json(err);
@@ -42,7 +42,11 @@ module.exports = {
   // PUT route that updates a user by _id
   async updateUser(req, res) {
     try {
-      const user = await User.findOneAndUpdate({ _id: req.params.userId });
+      const user = await User.findOneAndUpdate(
+        { _id: req.params.userId },
+        { $set: req.body },
+        { runValidators: true, new: true }
+      );
 
       if (!user) {
         return res.status(404).json({ message: 'No user with that ID!' });
@@ -94,7 +98,7 @@ module.exports = {
     try {
       const user = await User.findOneAndUpdate(
         { _id: req.params.userId },
-        { $pull: { friends: { userId: req.params.userId } } },
+        { $pull: { friends: req.params.friendId } },
         { runValidators: true, new: true }
       );
 
