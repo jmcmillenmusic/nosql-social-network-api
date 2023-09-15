@@ -24,7 +24,7 @@ To seed the database and be able to manipulate its data, open the terminal from 
 Then, run this command to start the server:
 `node index.js`
 From there, you can run your routes in Insomnia in order to see all of the Create, Read, Update, and Delete functions.
-You can watch this video to see the E-commerce back-end in action:
+You can watch this video to see the Social Network API in action:
 https://drive.google.com/file/d/1xXFhPI0DTqErW_hUm9eJ7e0dTsPuPG7Z/view
 
 ## Credits
