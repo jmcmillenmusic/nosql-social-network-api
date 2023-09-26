@@ -27,6 +27,10 @@ From there, you can run your routes in Insomnia in order to see all of the Creat
 You can watch this video to see the Social Network API in action:
 https://drive.google.com/file/d/1xXFhPI0DTqErW_hUm9eJ7e0dTsPuPG7Z/view
 
+![screenshot](./screenshot1.PNG)
+
+![screenshot](./screenshot2.PNG)
+
 ## Credits
 
 N/A
